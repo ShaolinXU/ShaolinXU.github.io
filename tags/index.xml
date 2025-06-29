@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Shaolin Xu&#39;s Blog</title>
+    <link>https://shaolinxu.github.io/tags/</link>
+    <description>Recent content in Tags on Shaolin Xu&#39;s Blog</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Jun 2025 22:07:04 +0200</lastBuildDate>
+    <atom:link href="https://shaolinxu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Lrearning</title>
+      <link>https://shaolinxu.github.io/tags/machine-lrearning/</link>
+      <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
+      <guid>https://shaolinxu.github.io/tags/machine-lrearning/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

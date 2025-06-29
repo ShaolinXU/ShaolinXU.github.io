@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Skills on Shaolin Xu&#39;s Blog</title>
+    <link>https://shaolinxu.github.io/categories/skills/</link>
+    <description>Recent content in Skills on Shaolin Xu&#39;s Blog</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Jun 2025 22:07:04 +0200</lastBuildDate>
+    <atom:link href="https://shaolinxu.github.io/categories/skills/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RandomForest vs KNN</title>
+      <link>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</link>
+      <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
+      <guid>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</guid>
+      <description>&lt;h2 id=&#34;relationship-to-nearest-neighbours&#34;&gt;Relationship to Nearest Neighbours&lt;/h2&gt;
+&lt;h2 id=&#34;与最近邻算法的关系&#34;&gt;与最近邻算法的关系&lt;/h2&gt;
+&lt;h3 id=&#34;original-text--translation&#34;&gt;Original Text &amp;amp; Translation&lt;/h3&gt;
+&lt;h3 id=&#34;原文与翻译对照&#34;&gt;原文与翻译对照：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;A relationship between random forests and the k-nearest neighbours algorithm was pointed out by Lin and Jeon in 2002.&lt;/strong&gt;
+Lin 和 Jeon 在 2002 年指出了随机森林与 k-近邻算法（k-NN）之间的关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It turns out that both can be viewed as so-called weighted neighbourhoods schemes.&lt;/strong&gt;
+研究发现，这两种算法都可以被视为一种“加权邻域策略”（weighted neighbourhood scheme）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;These are models built from a training set that make predictions for new points by looking at the neighbourhood of the point, formalized by a weight function.&lt;/strong&gt;
+它们的模型都是基于训练集建立的，通过观察新样本点的“邻域”来进行预测，并使用某种权重函数对邻域内的样本加权。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Shaolin Xu&#39;s Blog</title>
+    <link>https://shaolinxu.github.io/</link>
+    <description>Recent content on Shaolin Xu&#39;s Blog</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Jun 2025 22:07:04 +0200</lastBuildDate>
+    <atom:link href="https://shaolinxu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RandomForest vs KNN</title>
+      <link>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</link>
+      <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
+      <guid>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</guid>
+      <description>&lt;h2 id=&#34;relationship-to-nearest-neighbours&#34;&gt;Relationship to Nearest Neighbours&lt;/h2&gt;
+&lt;h2 id=&#34;与最近邻算法的关系&#34;&gt;与最近邻算法的关系&lt;/h2&gt;
+&lt;h3 id=&#34;original-text--translation&#34;&gt;Original Text &amp;amp; Translation&lt;/h3&gt;
+&lt;h3 id=&#34;原文与翻译对照&#34;&gt;原文与翻译对照：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;A relationship between random forests and the k-nearest neighbours algorithm was pointed out by Lin and Jeon in 2002.&lt;/strong&gt;
+Lin 和 Jeon 在 2002 年指出了随机森林与 k-近邻算法（k-NN）之间的关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It turns out that both can be viewed as so-called weighted neighbourhoods schemes.&lt;/strong&gt;
+研究发现，这两种算法都可以被视为一种“加权邻域策略”（weighted neighbourhood scheme）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;These are models built from a training set that make predictions for new points by looking at the neighbourhood of the point, formalized by a weight function.&lt;/strong&gt;
+它们的模型都是基于训练集建立的，通过观察新样本点的“邻域”来进行预测，并使用某种权重函数对邻域内的样本加权。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RandomForest pro</title>
+      <link>https://shaolinxu.github.io/blogs/randomforest-pros/</link>
+      <pubDate>Fri, 27 Jun 2025 22:07:04 +0200</pubDate>
+      <guid>https://shaolinxu.github.io/blogs/randomforest-pros/</guid>
+      <description>&lt;p&gt;以下是 &lt;strong&gt;Random Forest（随机森林）算法优缺点&lt;/strong&gt; 的中英对照翻译：&lt;/p&gt;
+&lt;h2 id=&#34;3-advantages-and-disadvantages-of-random-forest-algorithm&#34;&gt;3. Advantages and Disadvantages of Random Forest Algorithm&lt;/h2&gt;
+&lt;h2 id=&#34;3-随机森林算法的优缺点&#34;&gt;3. 随机森林算法的优缺点&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;advantages-of-random-forest-algorithm&#34;&gt;Advantages of Random Forest Algorithm&lt;/h3&gt;
+&lt;h3 id=&#34;随机森林算法的优点如下&#34;&gt;随机森林算法的优点如下：&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Random forest algorithm can be used to solve both classification and regression problems.&lt;/strong&gt;
+随机森林算法既可以用于分类问题，也可以用于回归问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;It is considered as very accurate and robust model because it uses large number of decision-trees to make predictions.&lt;/strong&gt;
+它被认为是一种非常准确且稳健的模型，因为它利用大量的决策树来进行预测。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Random forests takes the average of all the predictions made by the decision-trees, which cancels out the biases. So, it does not suffer from the overfitting problem.&lt;/strong&gt;
+随机森林对所有决策树的预测结果取平均，从而抵消偏差，因此不容易过拟合。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
