@@ -6,8 +6,16 @@
     <description>Recent content on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2025 22:07:04 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 29 Jun 2025 23:15:00 +0700</lastBuildDate>
     <atom:link href="https://shaolinxu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://shaolinxu.github.io/about/</link>
+      <pubDate>Sun, 29 Jun 2025 23:15:00 +0700</pubDate>
+      <guid>https://shaolinxu.github.io/about/</guid>
+      <description>&lt;h1 id=&#34;my-background&#34;&gt;My Background&lt;/h1&gt;
+&lt;p&gt;This is a test pages&lt;/p&gt;</description>
+    </item>
     <item>
       <title>RandomForest vs KNN</title>
       <link>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</link>
