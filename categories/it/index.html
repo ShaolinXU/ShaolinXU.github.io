@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>404 Page not found | Shaolin Xu&#39;s Blog</title>
+<title>IT | Shaolin Xu&#39;s Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/404.html">
+<link rel="canonical" href="http://localhost:1313/categories/it/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,7 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/404.html">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/it/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/it/">
 <noscript>
     <style>
         #theme-toggle,
@@ -131,8 +132,28 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<div class="not-found">404</div>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/categories/">Categories</a></div>
+  <h1>
+    IT
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to Add Ip to Linux Prompt
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Assumption
+you are using oh-my-zsh you are using ys as theme create a helper function edit the ys theme file: ~/.oh-my-zsh/themes/ys.zsh-theme
+add the following function to the abovementioned file
+function get_ip_address { # Get primary IPv4 address echo &#34;$(ipconfig getifaddr en0 2&gt;/dev/null || hostname -I | awk &#39;{print $1}&#39;)&#34; } use the helper function use the function, get_ip_address, in the PROMPT
+PROMPT=&#34; %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \ %(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \ %{$reset_color%}@ \ %{$fg[green]%}$(get_ip_address) \ %{$reset_color%}in \ %{$terminfo[bold]$fg[blue]%}%d%{$reset_color%}\ ${hg_info}\ ${git_info}\ ${svn_info}\ ${venv_info}\ \ [%*] $exit_code %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}&#34; </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-07-03 09:01:27 +0200 CEST'>July 3, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to How to Add Ip to Linux Prompt" href="http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/"></a>
+</article>
     </main>
     
 <footer class="footer">

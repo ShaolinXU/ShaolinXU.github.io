@@ -2,17 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on Shaolin Xu&#39;s Blog</title>
-    <link>https://shaolinxu.github.io/blogs/</link>
+    <link>http://localhost:1313/blogs/</link>
     <description>Recent content in Blogs on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2025 22:07:04 +0200</lastBuildDate>
-    <atom:link href="https://shaolinxu.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jul 2025 09:01:27 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Add Ip to Linux Prompt</title>
+      <link>http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/</link>
+      <pubDate>Thu, 03 Jul 2025 09:01:27 +0200</pubDate>
+      <guid>http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/</guid>
+      <description>&lt;p&gt;Assumption&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;you are using oh-my-zsh&lt;/li&gt;
+&lt;li&gt;you are using ys as theme&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;create-a-helper-function&#34;&gt;create a helper function&lt;/h1&gt;
+&lt;p&gt;edit the ys theme file: &lt;code&gt;~/.oh-my-zsh/themes/ys.zsh-theme&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;add the following function to the abovementioned file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; get_ip_address &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Get primary IPv4 address&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;ipconfig getifaddr en0 2&amp;gt;/dev/null &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; hostname -I | awk &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;use-the-helper-function&#34;&gt;use the helper function&lt;/h1&gt;
+&lt;p&gt;use the function, &lt;code&gt;get_ip_address&lt;/code&gt;, in the &lt;code&gt;PROMPT&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;PROMPT&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%{&lt;/span&gt;$terminfo&lt;span style=&#34;color:#e6db74&#34;&gt;[bold]&lt;/span&gt;$fg&lt;span style=&#34;color:#e6db74&#34;&gt;[blue]%}#%{&lt;/span&gt;$reset_color&lt;span style=&#34;color:#e6db74&#34;&gt;%} \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%(#,%{&lt;/span&gt;$bg&lt;span style=&#34;color:#e6db74&#34;&gt;[yellow]%}%{&lt;/span&gt;$fg&lt;span style=&#34;color:#e6db74&#34;&gt;[black]%}%n%{&lt;/span&gt;$reset_color&lt;span style=&#34;color:#e6db74&#34;&gt;%},%{&lt;/span&gt;$fg&lt;span style=&#34;color:#e6db74&#34;&gt;[cyan]%}%n) \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%{&lt;/span&gt;$reset_color&lt;span style=&#34;color:#e6db74&#34;&gt;%}@ \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%{&lt;/span&gt;$fg&lt;span style=&#34;color:#e6db74&#34;&gt;[green]%}&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;get_ip_address&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%{&lt;/span&gt;$reset_color&lt;span style=&#34;color:#e6db74&#34;&gt;%}in \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%{&lt;/span&gt;$terminfo&lt;span style=&#34;color:#e6db74&#34;&gt;[bold]&lt;/span&gt;$fg&lt;span style=&#34;color:#e6db74&#34;&gt;[blue]%}%d%{&lt;/span&gt;$reset_color&lt;span style=&#34;color:#e6db74&#34;&gt;%}\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;hg_info&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;git_info&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;svn_info&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;venv_info&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[%*] &lt;/span&gt;$exit_code&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%{&lt;/span&gt;$terminfo&lt;span style=&#34;color:#e6db74&#34;&gt;[bold]&lt;/span&gt;$fg&lt;span style=&#34;color:#e6db74&#34;&gt;[red]%}&lt;/span&gt;$&lt;span style=&#34;color:#e6db74&#34;&gt; %{&lt;/span&gt;$reset_color&lt;span style=&#34;color:#e6db74&#34;&gt;%}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>RandomForest vs KNN</title>
-      <link>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</link>
+      <link>http://localhost:1313/blogs/randomforest-vs-knn/</link>
       <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</guid>
+      <guid>http://localhost:1313/blogs/randomforest-vs-knn/</guid>
       <description>&lt;h2 id=&#34;relationship-to-nearest-neighbours&#34;&gt;Relationship to Nearest Neighbours&lt;/h2&gt;
 &lt;h2 id=&#34;与最近邻算法的关系&#34;&gt;与最近邻算法的关系&lt;/h2&gt;
 &lt;h3 id=&#34;original-text--translation&#34;&gt;Original Text &amp;amp; Translation&lt;/h3&gt;
@@ -32,9 +67,9 @@ Lin 和 Jeon 在 2002 年指出了随机森林与 k-近邻算法（k-NN）之间
     </item>
     <item>
       <title>RandomForest pro</title>
-      <link>https://shaolinxu.github.io/blogs/randomforest-pros/</link>
+      <link>http://localhost:1313/blogs/randomforest-pros/</link>
       <pubDate>Fri, 27 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/randomforest-pros/</guid>
+      <guid>http://localhost:1313/blogs/randomforest-pros/</guid>
       <description>&lt;p&gt;以下是 &lt;strong&gt;Random Forest（随机森林）算法优缺点&lt;/strong&gt; 的中英对照翻译：&lt;/p&gt;
 &lt;h2 id=&#34;3-advantages-and-disadvantages-of-random-forest-algorithm&#34;&gt;3. Advantages and Disadvantages of Random Forest Algorithm&lt;/h2&gt;
 &lt;h2 id=&#34;3-随机森林算法的优缺点&#34;&gt;3. 随机森林算法的优缺点&lt;/h2&gt;
