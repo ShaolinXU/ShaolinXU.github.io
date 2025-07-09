@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Shaolin Xu&#39;s Blog</title>
-    <link>https://shaolinxu.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Jul 2025 09:43:58 +0200</lastBuildDate>
-    <atom:link href="https://shaolinxu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Understand Fastapi Delete</title>
-      <link>https://shaolinxu.github.io/blog/how-to-understand-fastapi-delete/</link>
+      <link>http://localhost:1313/blogs/how-to-understand-fastapi-delete/</link>
       <pubDate>Wed, 09 Jul 2025 09:43:58 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blog/how-to-understand-fastapi-delete/</guid>
+      <guid>http://localhost:1313/blogs/how-to-understand-fastapi-delete/</guid>
       <description>&lt;h2 id=&#34;-问题拆解&#34;&gt;🧠 问题拆解&lt;/h2&gt;
 &lt;p&gt;你问的是：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -59,9 +59,9 @@
     </item>
     <item>
       <title>How to Add Ip to Linux Prompt</title>
-      <link>https://shaolinxu.github.io/blogs/how-to-add-ip-to-linux-prompt/</link>
+      <link>http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/</link>
       <pubDate>Thu, 03 Jul 2025 09:01:27 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/how-to-add-ip-to-linux-prompt/</guid>
+      <guid>http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/</guid>
       <description>&lt;p&gt;Assumption&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;you are using oh-my-zsh&lt;/li&gt;
@@ -94,17 +94,17 @@
     </item>
     <item>
       <title>About</title>
-      <link>https://shaolinxu.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 29 Jun 2025 23:15:00 +0700</pubDate>
-      <guid>https://shaolinxu.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h1 id=&#34;my-background&#34;&gt;My Background&lt;/h1&gt;
 &lt;p&gt;This is a test pages&lt;/p&gt;</description>
     </item>
     <item>
       <title>RandomForest vs KNN</title>
-      <link>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</link>
+      <link>http://localhost:1313/blogs/randomforest-vs-knn/</link>
       <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</guid>
+      <guid>http://localhost:1313/blogs/randomforest-vs-knn/</guid>
       <description>&lt;h2 id=&#34;relationship-to-nearest-neighbours&#34;&gt;Relationship to Nearest Neighbours&lt;/h2&gt;
 &lt;h2 id=&#34;与最近邻算法的关系&#34;&gt;与最近邻算法的关系&lt;/h2&gt;
 &lt;h3 id=&#34;original-text--translation&#34;&gt;Original Text &amp;amp; Translation&lt;/h3&gt;
@@ -124,9 +124,9 @@ Lin 和 Jeon 在 2002 年指出了随机森林与 k-近邻算法（k-NN）之间
     </item>
     <item>
       <title>RandomForest pro</title>
-      <link>https://shaolinxu.github.io/blogs/randomforest-pros/</link>
+      <link>http://localhost:1313/blogs/randomforest-pros/</link>
       <pubDate>Fri, 27 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/randomforest-pros/</guid>
+      <guid>http://localhost:1313/blogs/randomforest-pros/</guid>
       <description>&lt;p&gt;以下是 &lt;strong&gt;Random Forest（随机森林）算法优缺点&lt;/strong&gt; 的中英对照翻译：&lt;/p&gt;
 &lt;h2 id=&#34;3-advantages-and-disadvantages-of-random-forest-algorithm&#34;&gt;3. Advantages and Disadvantages of Random Forest Algorithm&lt;/h2&gt;
 &lt;h2 id=&#34;3-随机森林算法的优缺点&#34;&gt;3. 随机森林算法的优缺点&lt;/h2&gt;

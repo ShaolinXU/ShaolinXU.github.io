@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Shaolin Xu&#39;s Blog</title>
-    <link>https://shaolinxu.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Jul 2025 09:43:58 +0200</lastBuildDate>
-    <atom:link href="https://shaolinxu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coding</title>
-      <link>https://shaolinxu.github.io/categories/coding/</link>
+      <link>http://localhost:1313/categories/coding/</link>
       <pubDate>Wed, 09 Jul 2025 09:43:58 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/categories/coding/</guid>
+      <guid>http://localhost:1313/categories/coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>https://shaolinxu.github.io/categories/python/</link>
+      <link>http://localhost:1313/categories/python/</link>
       <pubDate>Wed, 09 Jul 2025 09:43:58 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/categories/python/</guid>
+      <guid>http://localhost:1313/categories/python/</guid>
       <description></description>
     </item>
     <item>
       <title>IT</title>
-      <link>https://shaolinxu.github.io/categories/it/</link>
+      <link>http://localhost:1313/categories/it/</link>
       <pubDate>Thu, 03 Jul 2025 09:01:27 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/categories/it/</guid>
+      <guid>http://localhost:1313/categories/it/</guid>
       <description></description>
     </item>
     <item>
       <title>Skills</title>
-      <link>https://shaolinxu.github.io/categories/skills/</link>
+      <link>http://localhost:1313/categories/skills/</link>
       <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/categories/skills/</guid>
+      <guid>http://localhost:1313/categories/skills/</guid>
       <description></description>
     </item>
   </channel>

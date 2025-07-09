@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Fastapi on Shaolin Xu&#39;s Blog</title>
-    <link>https://shaolinxu.github.io/tags/fastapi/</link>
+    <link>http://localhost:1313/tags/fastapi/</link>
     <description>Recent content in Fastapi on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Jul 2025 09:43:58 +0200</lastBuildDate>
-    <atom:link href="https://shaolinxu.github.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Understand Fastapi Delete</title>
-      <link>https://shaolinxu.github.io/blog/how-to-understand-fastapi-delete/</link>
+      <link>http://localhost:1313/blogs/how-to-understand-fastapi-delete/</link>
       <pubDate>Wed, 09 Jul 2025 09:43:58 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blog/how-to-understand-fastapi-delete/</guid>
+      <guid>http://localhost:1313/blogs/how-to-understand-fastapi-delete/</guid>
       <description>&lt;h2 id=&#34;-问题拆解&#34;&gt;🧠 问题拆解&lt;/h2&gt;
 &lt;p&gt;你问的是：&lt;/p&gt;
 &lt;blockquote&gt;

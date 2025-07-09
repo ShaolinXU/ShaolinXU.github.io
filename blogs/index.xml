@@ -2,17 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blogs on Shaolin Xu&#39;s Blog</title>
-    <link>https://shaolinxu.github.io/blogs/</link>
+    <link>http://localhost:1313/blogs/</link>
     <description>Recent content in Blogs on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jul 2025 09:01:27 +0200</lastBuildDate>
-    <atom:link href="https://shaolinxu.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jul 2025 09:43:58 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Understand Fastapi Delete</title>
+      <link>http://localhost:1313/blogs/how-to-understand-fastapi-delete/</link>
+      <pubDate>Wed, 09 Jul 2025 09:43:58 +0200</pubDate>
+      <guid>http://localhost:1313/blogs/how-to-understand-fastapi-delete/</guid>
+      <description>&lt;h2 id=&#34;-问题拆解&#34;&gt;🧠 问题拆解&lt;/h2&gt;
+&lt;p&gt;你问的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;FastAPI 的 &lt;code&gt;@app.delete&lt;/code&gt; 方法调用后是否真的“删除”了资源？以及之后是否仍可以在函数内部添加新的内容？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-fastapi-的-appdelete-是什么&#34;&gt;1️⃣ FastAPI 的 &lt;code&gt;@app.delete&lt;/code&gt; 是什么？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@app.delete(...)&lt;/code&gt; 是 FastAPI 提供的一个装饰器，用于声明某个 HTTP &lt;strong&gt;DELETE 请求的处理函数&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;它本质上是将这个路径绑定到某个函数上，处理逻辑完全由你自己编写。&lt;/li&gt;
+&lt;li&gt;它本身 &lt;strong&gt;并不自动删除任何数据&lt;/strong&gt;，只是标记这是一个处理删除操作的函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-结论&#34;&gt;✅ 结论：&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;@app.delete&lt;/code&gt; 不等于自动删除 —— 真正的删除操作必须你自己在函数体内写，比如 &lt;code&gt;del students[student_id]&lt;/code&gt;。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-删除后还能添加数据吗&#34;&gt;2️⃣ 删除后还能添加数据吗？&lt;/h2&gt;
+&lt;p&gt;是的，&lt;strong&gt;完全可以&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你在 &lt;code&gt;@app.delete&lt;/code&gt; 处理函数内部可以做任何事，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;记录日志&lt;/li&gt;
+&lt;li&gt;添加新的数据&lt;/li&gt;
+&lt;li&gt;给另一个数据结构追加内容&lt;/li&gt;
+&lt;li&gt;向外部系统发送请求&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;甚至添加回被删除的数据（虽然不常见）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-举个例子删除后添加新内容&#34;&gt;3️⃣ 举个例子：删除后添加新内容&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@app.delete&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/delete-student/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{student_id}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;delete_student&lt;/span&gt;(student_id: int):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; student_id &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; students:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;raise&lt;/span&gt; HTTPException(status_code&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;404&lt;/span&gt;, detail&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Student does not exist&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 获取要删除的学生信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    deleted_student &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; students[student_id]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 删除该学生&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;del&lt;/span&gt; students[student_id]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 将该学生信息添加到另一个“已删除学生记录”&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    deleted_log[student_id] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; deleted_student
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Student deleted and logged successfully&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里你就完成了：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to Add Ip to Linux Prompt</title>
-      <link>https://shaolinxu.github.io/blogs/how-to-add-ip-to-linux-prompt/</link>
+      <link>http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/</link>
       <pubDate>Thu, 03 Jul 2025 09:01:27 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/how-to-add-ip-to-linux-prompt/</guid>
+      <guid>http://localhost:1313/blogs/how-to-add-ip-to-linux-prompt/</guid>
       <description>&lt;p&gt;Assumption&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;you are using oh-my-zsh&lt;/li&gt;
@@ -45,9 +94,9 @@
     </item>
     <item>
       <title>RandomForest vs KNN</title>
-      <link>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</link>
+      <link>http://localhost:1313/blogs/randomforest-vs-knn/</link>
       <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/randomforest-vs-knn/</guid>
+      <guid>http://localhost:1313/blogs/randomforest-vs-knn/</guid>
       <description>&lt;h2 id=&#34;relationship-to-nearest-neighbours&#34;&gt;Relationship to Nearest Neighbours&lt;/h2&gt;
 &lt;h2 id=&#34;与最近邻算法的关系&#34;&gt;与最近邻算法的关系&lt;/h2&gt;
 &lt;h3 id=&#34;original-text--translation&#34;&gt;Original Text &amp;amp; Translation&lt;/h3&gt;
@@ -67,9 +116,9 @@ Lin 和 Jeon 在 2002 年指出了随机森林与 k-近邻算法（k-NN）之间
     </item>
     <item>
       <title>RandomForest pro</title>
-      <link>https://shaolinxu.github.io/blogs/randomforest-pros/</link>
+      <link>http://localhost:1313/blogs/randomforest-pros/</link>
       <pubDate>Fri, 27 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>https://shaolinxu.github.io/blogs/randomforest-pros/</guid>
+      <guid>http://localhost:1313/blogs/randomforest-pros/</guid>
       <description>&lt;p&gt;以下是 &lt;strong&gt;Random Forest（随机森林）算法优缺点&lt;/strong&gt; 的中英对照翻译：&lt;/p&gt;
 &lt;h2 id=&#34;3-advantages-and-disadvantages-of-random-forest-algorithm&#34;&gt;3. Advantages and Disadvantages of Random Forest Algorithm&lt;/h2&gt;
 &lt;h2 id=&#34;3-随机森林算法的优缺点&#34;&gt;3. 随机森林算法的优缺点&lt;/h2&gt;
