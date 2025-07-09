@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Tags | Shaolin Xu&#39;s Blog</title>
+<title>Fastapi | Shaolin Xu&#39;s Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://shaolinxu.github.io/tags/">
+<link rel="canonical" href="https://shaolinxu.github.io/tags/fastapi/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://shaolinxu.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://shaolinxu.github.io/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="https://shaolinxu.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://shaolinxu.github.io/tags/index.xml">
-<link rel="alternate" hreflang="en" href="https://shaolinxu.github.io/tags/">
+<link rel="alternate" type="application/rss+xml" href="https://shaolinxu.github.io/tags/fastapi/index.xml">
+<link rel="alternate" hreflang="en" href="https://shaolinxu.github.io/tags/fastapi/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,13 +56,13 @@
         }
 
     </style>
-</noscript><meta property="og:url" content="https://shaolinxu.github.io/tags/">
+</noscript><meta property="og:url" content="https://shaolinxu.github.io/tags/fastapi/">
   <meta property="og:site_name" content="Shaolin Xu&#39;s Blog">
-  <meta property="og:title" content="Tags">
+  <meta property="og:title" content="Fastapi">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tags">
+<meta name="twitter:title" content="Fastapi">
 <meta name="twitter:description" content="">
 
 </head>
@@ -119,7 +119,7 @@
             </li>
             <li>
                 <a href="https://shaolinxu.github.io/tags/" title="Tags">
-                    <span class="active">Tags</span>
+                    <span>Tags</span>
                 </a>
             </li>
             <li>
@@ -140,22 +140,30 @@
         </ul>
     </nav>
 </header>
-<main class="main">
-<header class="page-header">
-    <h1>Tags</h1>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://shaolinxu.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://shaolinxu.github.io/tags/">Tags</a></div>
+  <h1>
+    Fastapi
+  </h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://shaolinxu.github.io/tags/fastapi/">fastapi <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://shaolinxu.github.io/tags/linux/">Linux <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://shaolinxu.github.io/tags/machine-lrearning/">Machine Lrearning <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">How to Understand Fastapi Delete
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>🧠 问题拆解 你问的是：
+FastAPI 的 @app.delete 方法调用后是否真的“删除”了资源？以及之后是否仍可以在函数内部添加新的内容？
+1️⃣ FastAPI 的 @app.delete 是什么？ @app.delete(...) 是 FastAPI 提供的一个装饰器，用于声明某个 HTTP DELETE 请求的处理函数。 它本质上是将这个路径绑定到某个函数上，处理逻辑完全由你自己编写。 它本身 并不自动删除任何数据，只是标记这是一个处理删除操作的函数。 ✅ 结论： @app.delete 不等于自动删除 —— 真正的删除操作必须你自己在函数体内写，比如 del students[student_id]。
+2️⃣ 删除后还能添加数据吗？ 是的，完全可以。
+你在 @app.delete 处理函数内部可以做任何事，包括：
+记录日志 添加新的数据 给另一个数据结构追加内容 向外部系统发送请求 甚至添加回被删除的数据（虽然不常见） 3️⃣ 举个例子：删除后添加新内容 @app.delete(&#34;/delete-student/{student_id}&#34;) def delete_student(student_id: int): if student_id not in students: raise HTTPException(status_code=404, detail=&#34;Student does not exist&#34;) # 获取要删除的学生信息 deleted_student = students[student_id] # 删除该学生 del students[student_id] # 将该学生信息添加到另一个“已删除学生记录” deleted_log[student_id] = deleted_student return {&#34;message&#34;: &#34;Student deleted and logged successfully&#34;} 这里你就完成了：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-07-09 09:43:58 +0200 CEST'>July 9, 2025</span>&nbsp;·&nbsp;1 min</footer>
+  <a class="entry-link" aria-label="post link to How to Understand Fastapi Delete" href="https://shaolinxu.github.io/blog/how-to-understand-fastapi-delete/"></a>
+</article>
     </main>
     
 <footer class="footer">
