@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Shaolin Xu&#39;s Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://shaolinxu.github.io/tags/</link>
     <description>Recent content in Tags on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Jul 2025 09:43:58 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shaolinxu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fastapi</title>
-      <link>http://localhost:1313/tags/fastapi/</link>
+      <link>https://shaolinxu.github.io/tags/fastapi/</link>
       <pubDate>Wed, 09 Jul 2025 09:43:58 +0200</pubDate>
-      <guid>http://localhost:1313/tags/fastapi/</guid>
+      <guid>https://shaolinxu.github.io/tags/fastapi/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://shaolinxu.github.io/tags/linux/</link>
       <pubDate>Thu, 03 Jul 2025 09:01:27 +0200</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://shaolinxu.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Lrearning</title>
-      <link>http://localhost:1313/tags/machine-lrearning/</link>
+      <link>https://shaolinxu.github.io/tags/machine-lrearning/</link>
       <pubDate>Sat, 28 Jun 2025 22:07:04 +0200</pubDate>
-      <guid>http://localhost:1313/tags/machine-lrearning/</guid>
+      <guid>https://shaolinxu.github.io/tags/machine-lrearning/</guid>
       <description></description>
     </item>
   </channel>
