@@ -6,8 +6,48 @@
     <description>Recent content on Shaolin Xu&#39;s Blog</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jul 2025 09:43:58 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jul 2025 22:57:07 +0200</lastBuildDate>
     <atom:link href="https://shaolinxu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Rdp Ubuntu</title>
+      <link>https://shaolinxu.github.io/blogs/configure-rdp-ubuntu/</link>
+      <pubDate>Wed, 09 Jul 2025 22:57:07 +0200</pubDate>
+      <guid>https://shaolinxu.github.io/blogs/configure-rdp-ubuntu/</guid>
+      <description>&lt;p&gt;After configure the remote login on ubuntu, I still cannot connect to my ubuntu server using Windows App on my mac. After searching I found the following solution from reddit: &lt;a href=&#34;https://www.reddit.com/r/Ubuntu/comments/1c40ei8/comment/lhzgbk8/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;From Microsoft RDP export the RDP.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Open the file.rdp with your text editor
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Find: use redirection server name:i:0
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Change to: use redirection server name:i:1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Save
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Drag back to Microsoft RDP and open
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>How Clean and Reclaim Space on Mac</title>
+      <link>https://shaolinxu.github.io/blogs/how-clean-and-reclaim-space-on-mac/</link>
+      <pubDate>Wed, 09 Jul 2025 15:44:40 +0200</pubDate>
+      <guid>https://shaolinxu.github.io/blogs/how-clean-and-reclaim-space-on-mac/</guid>
+      <description>&lt;h1 id=&#34;library-related&#34;&gt;library related&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;uv
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;uv cache prune&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;brew
+&lt;ol&gt;
+&lt;li&gt;brew clean &amp;ndash;prune=all&lt;/li&gt;
+&lt;li&gt;brew clean -n&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
     <item>
       <title>How to Understand Fastapi Delete</title>
       <link>https://shaolinxu.github.io/blogs/how-to-understand-fastapi-delete/</link>
